@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDialog"
+        tools:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_marginTop="30dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Update Jumlah Penumpang"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Hapus Tiket"
+            android:backgroundTint="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/btnUpdate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUpdateJumlahPenumpang"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivMinus"
+                android:layout_width="30dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintTop_toBottomOf="@id/tvJumlahPenumpang"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvValueJumlahPenumpang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="30dp"
+                android:text="1"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/ivMinus"
+                app:layout_constraintTop_toBottomOf="@id/tvJumlahPenumpang"/>
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintTop_toBottomOf="@id/tvJumlahPenumpang"
+                app:layout_constraintStart_toEndOf="@id/tvValueJumlahPenumpang"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Jumlah Penumpang"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnUpdateJumlahPenumpang"
+            app:layout_constraintTop_toBottomOf="@id/llContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
